@@ -1,4 +1,4 @@
-# Rota Resgate
+# Ticket To Ride
 
 **Número da Lista**: X<br>
 **Conteúdo da Disciplina**: Grafos2<br>
