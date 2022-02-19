@@ -39,13 +39,15 @@ export const printOutcome = (end, dist, paths, graph) => {
 }
 
 // recebe o ponto de partida e o destino
-export const dijkstra = (src, end) => {
+export const dijkstra = (src, end, newGraph) => {
     const size = 35;
     const dist = new Array(size);           //salva a distancia minima percorrida de cada posicao
     const paths = new Array(size);          //salva o caminho mais barato pra cada posicao
     const visited =  new Array(size);       //Marca se o algoritmo ja testou todos os caminhos da posicao
     const queue = [];                       //Lista de prioridade ordenada pelo menor caminho
-    const graph = require("./data/graph.json");
+    // const graph = require("./data/graph.json");
+    const graph = newGraph;
+
 
     // "zera" tudo que precisa zerar
     for(let i = 0; i < size; i++) {
@@ -69,4 +71,4 @@ export const dijkstra = (src, end) => {
 }
 
 
-dijkstra(0, 21);
+// dijkstra(0, 21);
