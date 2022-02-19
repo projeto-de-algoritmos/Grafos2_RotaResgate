@@ -7,7 +7,7 @@ export const minDistance = (src, dist, paths, queue, graph, visited) => {
         let cost = graph[src].destinations[i][1];
 
 
-        if(!visited[queue_index] && dist[src] + cost < dist[position]) {
+        if(!visited[position] && dist[src] + cost < dist[position]) {
             //guarda caminho percorrido
             paths[position] = paths[src].slice();
             paths[position].push(position);
