@@ -3,9 +3,10 @@
     justify-content: center;
     align-items: center;
 
-    margin: 50px;;
+    margin-top: 50px;;
 }
 
 .board{
     width: 1000px;
+    height: 650px;
 }

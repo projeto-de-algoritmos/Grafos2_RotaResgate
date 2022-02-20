@@ -3,14 +3,32 @@ import './App.css';
 import Header from './components/Header';
 import Map from './components/Map';
 import SearchBar from './components/SearchBar';
+import MapChoice from './components/MapChoice';
 import { dijkstra } from './dijkstra/graph';
 
-const graph = require("./data/graph.json");
+const graph = require("./data/europeGraph.json");
 
 
 function App() {
   const [initialStation, setInitialStation] = useState(0);
   const [finalStation, setFinalStation] = useState(0);
+  const [currentMap, setCurrentMap] = useState("europe");
+  const [currentGraph, setCurrentGraph] = useState(graph);
+
+  const allMaps = [
+    {
+      name: "europe",
+      label: "Europa"
+    },
+    {
+      name: "usa",
+      label: "Estados Unidos"
+    },
+    {
+      name: "pennsylvania",
+      label: "Pensilvânia"
+    }
+  ];
 
   const handleInitialStation = (e, newStation) => {
     setInitialStation(newStation);
@@ -21,11 +39,16 @@ function App() {
   }
 
   const handleSearch = () => {
-    dijkstra(initialStation.id, finalStation.id, graph)
+    dijkstra(initialStation.id, finalStation.id, currentGraph)
   }
 
-  const teste = () => {
-    console.log(graph.map(e => e.name).sort((a,b) => a.localeCompare(b)));
+  const handleMap = (e, newMap) => {
+    setCurrentMap(newMap.name);
+    setCurrentGraph(require(`./data/${newMap.name}Graph.json`));
+  }
+
+  const changeMap = () => {
+
   }
 
   return (
@@ -34,12 +57,18 @@ function App() {
 
       <div className="map">
         <SearchBar 
-          graph={graph} 
+          graph={currentGraph} 
           handleInitialStation={handleInitialStation} 
           handleSearch={handleSearch}
           handleFinalStation={handleFinalStation}
         />
-        <Map />
+        <Map 
+          currentMap={currentMap}
+        />
+        <MapChoice 
+          allMaps={allMaps}
+          handleMap={handleMap}
+        />
       </div>
     </div>
   );

@@ -16,6 +16,7 @@ const SearchBar = ({graph, handleInitialStation, handleSearch, handleFinalStatio
                 renderInput={(params) => (
                 <TextField {...params} label="Estação Inicial" />
                 )}
+                isOptionEqualToValue={(option, value) => option.id === value.id}
                 onChange={handleInitialStation}
 
             />
@@ -27,6 +28,7 @@ const SearchBar = ({graph, handleInitialStation, handleSearch, handleFinalStatio
               renderInput={(params) => (
                 <TextField {...params} label="Estação Final" />
               )}
+              isOptionEqualToValue={(option, value) => option.id === value.id}
               onChange={handleFinalStation}
             />
             <Button

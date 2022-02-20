@@ -1,11 +1,10 @@
 import React from 'react';
-import ticketToRideBoard from "../../imgs/ticketToRideBoard.jpg";
 import './style.css';
 
-const Map = () => {
+const Map = ({currentMap}) => {
     return (
         <div className="container">
-            <img src={ticketToRideBoard} className="board"/>
+            <img src={require(`../../imgs/${currentMap}Board.jpg`)} className="board"/>
         </div>
     );
 }
