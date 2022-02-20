@@ -60,8 +60,8 @@ export const dijkstra = (src, end, newGraph) => {
     dist[src] = 0;
     queue.push(graph[src]);
 
-    while(src !== end) {
-    minDistance(src, dist, paths, queue, graph, visited);
+    while(!visited[end]) {
+        minDistance(src, dist, paths, queue, graph, visited);
         visited[src] = true;
         src = queue[0];
         queue.shift();
