@@ -14,6 +14,7 @@ function App() {
   const [finalStation, setFinalStation] = useState(0);
   const [currentMap, setCurrentMap] = useState("europe");
   const [currentGraph, setCurrentGraph] = useState(graph);
+  const [route, setRoute] = useState(0);
 
   const allMaps = [
     {
@@ -39,7 +40,9 @@ function App() {
   }
 
   const handleSearch = () => {
-    dijkstra(initialStation.id, finalStation.id, currentGraph)
+    const path = dijkstra(initialStation.id, finalStation.id, currentGraph)
+
+    setRoute(path);
   }
 
   const handleMap = (e, newMap) => {
@@ -56,19 +59,26 @@ function App() {
       <Header/>
 
       <div className="map">
-        <SearchBar 
-          graph={currentGraph} 
-          handleInitialStation={handleInitialStation} 
+        <SearchBar
+          graph={currentGraph}
+          handleInitialStation={handleInitialStation}
           handleSearch={handleSearch}
           handleFinalStation={handleFinalStation}
         />
-        <Map 
+        <Map
           currentMap={currentMap}
         />
-        <MapChoice 
+        <MapChoice
           allMaps={allMaps}
           handleMap={handleMap}
         />
+      </div>
+      <div>
+        <input className="result"
+              type="text"
+              value={(route)}
+              readOnly
+          />
       </div>
     </div>
   );

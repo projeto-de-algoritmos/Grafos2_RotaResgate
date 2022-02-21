@@ -36,6 +36,8 @@ export const printOutcome = (end, dist, paths, graph) => {
         }
     }
     console.log(stops);
+
+    return stops;
 }
 
 // recebe o ponto de partida e o destino
@@ -67,7 +69,7 @@ export const dijkstra = (src, end, newGraph) => {
         queue.shift();
     }
 
-    printOutcome(end, dist, paths, graph);
+    return printOutcome(end, dist, paths, graph);
 }
 
 
