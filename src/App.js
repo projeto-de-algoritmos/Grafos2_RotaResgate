@@ -14,7 +14,9 @@ function App() {
   const [finalStation, setFinalStation] = useState(0);
   const [currentMap, setCurrentMap] = useState("europe");
   const [currentGraph, setCurrentGraph] = useState(graph);
-  const [route, setRoute] = useState(0);
+  const [route, setRoute] = useState(
+    'Realize uma pesquisa.'
+  );
 
   const allMaps = [
     {
@@ -74,8 +76,9 @@ function App() {
         />
       </div>
       <div>
-        <input className="result"
+        <textarea className="result"
               type="text"
+              defaultValue={''}
               value={(route)}
               readOnly
           />
