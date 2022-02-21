@@ -3,10 +3,14 @@
     justify-content: center;
     align-items: center;
 
-    margin-top: 50px;;
+    margin-top: 3.125rem;
+
+    border: 8px solid rgb(39, 25, 14);
+
+    border-radius: 10px;
 }
 
 .board{
-    width: 1000px;
-    height: 650px;
+    width: 62.5rem;
+    height: 40.625rem;
 }

@@ -1,7 +1,6 @@
 import React from 'react';
 import Autocomplete from "@mui/material/Autocomplete";
 import TextField from "@mui/material/TextField";
-import Button from "@mui/material/Button";
 import './style.css';
 
 const MapChoice = ({allMaps, handleMap}) => {
@@ -19,14 +18,6 @@ const MapChoice = ({allMaps, handleMap}) => {
                 onChange={handleMap}
                 isOptionEqualToValue={(option, value) => option.id === value.id}  
             />
-            {/* <Button
-              variant="contained"
-              sx={{ marginTop: "10%", width: "80%" }}
-              // onClick={handleMap}
-            >
-              Encontrar
-            </Button> */}
-            
         </div>
     )
 }

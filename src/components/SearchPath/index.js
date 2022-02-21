@@ -4,7 +4,7 @@ import TextField from "@mui/material/TextField";
 import Button from "@mui/material/Button";
 import './style.css';
 
-const SearchBar = ({graph, handleInitialStation, handleSearch, handleFinalStation}) => {
+const SearchPath = ({graph, handleInitialStation, handleSearch, handleFinalStation}) => {
     
     return(
         <div className="searchContainer">
@@ -33,7 +33,7 @@ const SearchBar = ({graph, handleInitialStation, handleSearch, handleFinalStatio
             />
             <Button
               variant="contained"
-              sx={{ marginTop: "10%", width: "80%" }}
+              sx={{ marginTop: "10px", width: "80%" }}
               onClick={handleSearch}
             >
               Encontrar
@@ -43,4 +43,4 @@ const SearchBar = ({graph, handleInitialStation, handleSearch, handleFinalStatio
     )
 }
 
-export default SearchBar;
+export default SearchPath;
