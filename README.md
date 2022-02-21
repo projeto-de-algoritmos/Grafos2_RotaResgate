@@ -1,6 +1,9 @@
 # Ticket To Ride
 
-**Número da Lista**: X<br>
+<img src="./src/imgs/ticketToRideLogo.png" alt="Logo Ticket To Ride" width="200"/>
+
+
+**Número da Lista**: 2<br>
 **Conteúdo da Disciplina**: Grafos2<br>
 
 ## Alunos
@@ -10,7 +13,7 @@
 | 19/0106565  |  Fernando Miranda Calil |
 
 ## Sobre 
-Descreva os objetivos do seu projeto e como ele funciona. 
+Baseado no jogo de tabuleiro Ticket To Ride, este projeto visa encontrar o menor caminho entre duas estações de trem utilizando o Algoritmo de Dijkstra. É também possível selecionar qual mapa você deseja realizar a busca.
 
 ## Screenshots
 Adicione 3 ou mais screenshots do projeto em funcionamento.
