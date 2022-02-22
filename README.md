@@ -16,7 +16,7 @@
 Baseado no jogo de tabuleiro Ticket To Ride, este projeto visa encontrar o menor caminho entre duas estações de trem utilizando o Algoritmo de Dijkstra. É também possível selecionar qual mapa você deseja realizar a busca.
 
 ## Screenshots
-Adicione 3 ou mais screenshots do projeto em funcionamento.
+
 
 ## Instalação 
 **Linguagem**: Javascript<br>
